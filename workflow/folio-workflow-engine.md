@@ -620,12 +620,16 @@ The following documents and prototypes are relevant here:
 * [Ongoing discussion of other workflow systems](https://jira.indexdata.com/browse/INTFOLIO-6)
 
 <!--
-COMMENTS FROM HEIKKI
+COMMENTS FROM OTHERS
 
-You said in Montreal that "workflow instance" is a clumsy word, and proposed "job" instead. I liked that, and think you should sneak it into your document. (It _is_ in the document, but I lacked the courage of my convictions and kept using both terms. I'll make it more consistent.)
+HEIKKI: You said in Montreal that "workflow instance" is a clumsy word, and proposed "job" instead. I liked that, and think you should sneak it into your document. (It _is_ in the document, but I lacked the courage of my convictions and kept using both terms. I'll make it more consistent.)
 
-I would like to append a comment to "Pass by value or by reference?": We can always optimize things later, when or if we find problems.
+HEIKKI: I would like to append a comment to "Pass by value or by reference?": We can always optimize things later, when or if we find problems.
 
-"When I get an object of type item I want to use Frontside's @fontside/pretty-users instead" Should that not be "@fontside/pretty-items" ?
+HEIKKI: "When I get an object of type item I want to use Frontside's @fontside/pretty-users instead" Should that not be "@fontside/pretty-items" ?
+
+KURT: There's any number of existing scripting languages that we can turn into a DSL. I'd use Lua before rolling our own.
+
+NASSIB: I know it has been popular lately to create DSLs, but there are some really great ones out there we could use for this. (So long as we have access to the parse-tree from JavaScript. "Roll out own" doesn't _have_ to mean building the whole thing. But it does mean we need to be able to get our fingers into the inner workings.)
 
 -->
