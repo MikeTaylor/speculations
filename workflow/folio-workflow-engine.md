@@ -619,3 +619,13 @@ The following documents and prototypes are relevant here:
 * [Another, more rationale-focused, white paper on FOLIO workflow](https://docs.google.com/document/d/1Q_owoSAss2GfiQcMV7E8hd9JJRM11CxIpaYp-YKl9Bc/edit#heading=h.36347oo84qw8)
 * [Ongoing discussion of other workflow systems](https://jira.indexdata.com/browse/INTFOLIO-6)
 
+<!--
+COMMENTS FROM HEIKKI
+
+You said in Montreal that "workflow instance" is a clumsy word, and proposed "job" instead. I liked that, and think you should sneak it into your document. (It _is_ in the document, but I lacked the courage of my convictions and kept using both terms. I'll make it more consistent.)
+
+I would like to append a comment to "Pass by value or by reference?": We can always optimize things later, when or if we find problems.
+
+"When I get an object of type item I want to use Frontside's @fontside/pretty-users instead" Should that not be "@fontside/pretty-items" ?
+
+-->
