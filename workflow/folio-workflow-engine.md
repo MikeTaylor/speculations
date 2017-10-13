@@ -632,4 +632,19 @@ KURT: There's any number of existing scripting languages that we can turn into a
 
 NASSIB: I know it has been popular lately to create DSLs, but there are some really great ones out there we could use for this. (So long as we have access to the parse-tree from JavaScript. "Roll out own" doesn't _have_ to mean building the whole thing. But it does mean we need to be able to get our fingers into the inner workings.)
 
+HEIKKI: I think our CF worked pretty well with a small set of domain-specific steps. That also fits with the graphical editor. I think that would be the easiest way to get a good workflow engine.
+If we use an existing scripting language, how on earth are we going to manage the various levels of error handling? I would not trust a librarian to remember to write code for all failure modes, but I would trust him to check a box "abort the job if this fails", or "list any failures in the error log, and proceed"
+Besides, scripting languages might be too powerful, so we would need to sandbox them so they don't load untrusted modules, make random web requests, etc.
+
+HEIKKI: One thing we did right in CF was our variable structure. Basically the whole state of the connector was kept in one javascript object, that was divided on the top level into input, output, tmp, and system. Any steps could access any of the variables with something like ${input.keyword} and we had standard settings for assigning a variable (overwrite value, append to the array, concatenate value, fail if empty, etc)
+We could do the same in the workflow. That would make it easy to save the state of the job, and continue later.
+And that would give us a good set of data types to work with - those defined in Json. We would probably not need to make users or items first class citizens for the workflow, they would be just json objects.  Also, a log of steps executed and of errors and warnings would fit in there too.
+
+HEIKKI: For the first version, I think we could get away with a fairly small number of steps.
+- Okapi request (GET, POST, PUT, or DELETE) with path, input data, and where to put the output data and error messages
+- Some kind of data manipulation step, like the transform in CF.
+- Suspend job until a condition is true. setting for how often to check, and when to give up
+- Some way to iterate over an array
+- Some conditional
+
 -->
