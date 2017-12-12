@@ -9,6 +9,8 @@ Version history:
 * 1.1 (6 October 2017): copy-edited and cleaned up.
 * 1.2 (6 October 2017): turn "see also"s into Appendix B.
 * 1.3 (10 October 2017): add some more links to Appendix B, fix some typos.
+* 1.4 (12 December 2017): add Appendix C on relevant standards
+
 
 Contents
 --------
@@ -55,6 +57,7 @@ Contents
     * [Error handling](#error-handling)
 * [Appendix A: Using the notification system](#appendix-a-using-the-notification-system)
 * [Appendix B: Related documents](#appendix-b-related-documents)
+* [Appendix C: Relevant standards](#appendix-c-relevant-standards)
 
 
 
@@ -618,6 +621,24 @@ The following documents and prototypes are relevant here:
 * [Filip Jakobsen's "Design Bite" on notifications](https://discuss.folio.org/t/tangerine-design-bite-bell-notifications-in-the-ui/194)
 * [Another, more rationale-focused, white paper on FOLIO workflow](https://docs.google.com/document/d/1Q_owoSAss2GfiQcMV7E8hd9JJRM11CxIpaYp-YKl9Bc/edit#heading=h.36347oo84qw8)
 * [Ongoing discussion of other workflow systems](https://jira.indexdata.com/browse/INTFOLIO-6)
+
+
+
+## Appendix C: Relevant standards
+
+It seems there was quite a burst of work on systems like this in the early 2000s, but most of it came to nothing. Still, some of the artifacts that remain may be useful for helping us to think clearly through the issues, even if they have not generated actual software that we can use. They include:
+
+* [BPEL (Business Process Execution Language)](https://en.wikipedia.org/wiki/Business_Process_Execution_Language) is an OASIS standard describing an XML format that can describe workflows. It emerged from, and obsoletes, IBM's WSFL (Web Services Flow Language) and Microsoft's Xlang, both of which can now be ignored. However, BPEL itself appears moribund: [the OASIS standard for WS-BPEL 2.0](http://docs.oasis-open.org/wsbpel/2.0/OS/wsbpel-v2.0-OS.html) is from 2006.
+
+* [BPELscript](http://www.bpelscript.org/) is a human-readable representation of BPEL inspired by programming languages such as JavaScript. Its website was last modified in 2008, however. [Code exists on GitHub](https://github.com/bpeltools/bpelscript) to translate Bpelscript into the XML format, and may be useful -- though [its licence is not clear](https://github.com/BPELtools/bpelscript/issues/14) and, a small documentation update aside, the code was last touched in 2012.
+
+* [BPEL4People](http://docs.oasis-open.org/ns/bpel4people/bpel4people/200803) "introduces a BPEL extension to address human interactions in BPEL as a first-class citizen" (from [the specification](http://docs.oasis-open.org/bpel4people/bpel4people-1.1-spec-cs-01.html)). This seems very relevant to our interests, but once again seems to be have been abandoned: there is essentially no discussion of it apart from the 2010 standard itself.
+
+I have not been able to establish that these specifications have been adopted widely, or at all, or that they have been superseded by anything more modern: it seems that the world has simply lost insterest in standardising this kind of functionality. I assume that the various commercial operations have simply each gone their own way with proprietary offerings.
+
+My sense is that we can probably learn something from the notation of BPELscript and from the human-role analysis of BPEL4People, but that we will likely still need to write our own software. One possible alternative might be to adopt the BPELscript translator, if its licence allows this, extend it to support BPEL4People, and use that as our workflow language.
+
+
 
 <!--
 COMMENTS FROM OTHERS
