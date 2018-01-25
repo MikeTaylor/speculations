@@ -1,7 +1,8 @@
-
 # Very preliminary design for a workflow engine
 
-This is the result of reading Mike's white paper, and a few ideas of my own.
+Heikki Levanto
+
+This is the result of reading [Mike's white paper](folio-workflow-engine.md), and a few ideas of my own.
 
 ## Workflow
 A workflow is a template for jobs. It consists of a number of steps, and some
