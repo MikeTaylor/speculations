@@ -2,7 +2,7 @@
 
 Mike Taylor, Index Data `<mike@indexdata.com>`
 
-Document version 1.3 (10 October 2017).
+Document version 1.5 (25 January 2018).
 
 Version history:
 * 1.0 (5 October 2017): first essentially complete version.
@@ -10,6 +10,7 @@ Version history:
 * 1.2 (6 October 2017): turn "see also"s into Appendix B.
 * 1.3 (10 October 2017): add some more links to Appendix B, fix some typos.
 * 1.4 (12 December 2017): add Appendix C on relevant standards
+* 1.5 (25 January 2018): add links to INTFOLIO-11 and Heikki's design notes.
 
 
 Contents
@@ -621,7 +622,8 @@ The following documents and prototypes are relevant here:
 * [Filip Jakobsen's "Design Bite" on notifications](https://discuss.folio.org/t/tangerine-design-bite-bell-notifications-in-the-ui/194)
 * [Another, more rationale-focused, white paper on FOLIO workflow](https://docs.google.com/document/d/1Q_owoSAss2GfiQcMV7E8hd9JJRM11CxIpaYp-YKl9Bc/edit#heading=h.36347oo84qw8)
 * [Ongoing discussion of other workflow systems](https://jira.indexdata.com/browse/INTFOLIO-6)
-
+* [The Jira issue INTFOLIO-11, "Preliminary design for a workflow engine"](https://jira.indexdata.com/browse/INTFOLIO-11)
+* [Heikki's preliminary design for a workflow engine](engine-design.md)
 
 
 ## Appendix C: Relevant standards
