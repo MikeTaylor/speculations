@@ -25,7 +25,7 @@ But article-level metadata is also available from other sources -- for example [
 
 But [the OpenURL standard](https://en.wikipedia.org/wiki/OpenURL) was created _precisely_ to solve this problem: bridging from a discovered article to a link resolver that knows how to get to licenced copy of that article. And Google Scholar [explicitly supports OpenURL](https://scholar.google.com/intl/en/scholar/libraries.html) for this purpose.
 
-The only part of the equation that's missing is an OpenURL resolver that knows how to query FOLIO about packages. But we can easily build this: Index Data has [open-access OpenURL resolver code](http://search.cpan.org/~mirk/Keystone-Resolver/). Its front-end us good; and we can repurpose it with a back-end that emits WSAPI calls to Okapi, which will proxy them as appropriate to a KB module.
+The only part of the equation that's missing is an OpenURL resolver that knows how to query FOLIO about packages. But we can easily build this: Index Data has [open-access OpenURL resolver code](http://search.cpan.org/~mirk/Keystone-Resolver/). Its front-end is good; and we can repurpose it with a back-end that emits WSAPI calls to Okapi, which will proxy them as appropriate to a KB module.
 
 ## Appendix: other knowledge-bases
 
