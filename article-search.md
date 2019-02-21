@@ -29,7 +29,7 @@ The only part of the equation that's missing is an OpenURL resolver that knows h
 
 ## Appendix: other knowledge-bases
 
-Since the EBSCO KB will be accessed via a FOLIO module with a well-defined WSAPI interface, other KBs can be slipped into a FOLIO installation in place of EBSCO's product: for example, a module that accesses the SFX KB, if a licence ca be negotiated; or one that uses GoKB.
+Since the EBSCO KB will be accessed via a FOLIO module with a well-defined WSAPI interface, other KBs can be slipped into a FOLIO installation in place of EBSCO's product: for example, a module that accesses the SFX KB, if a licence can be negotiated; or one that uses GoKB.
 
 Putting this together, FOLIO customers will have a choice of what article-level discovery to use (e.g. Google Scholar), _and_ what KB to use; the FOLIO OpenURL resolver provides the necessary glue.
 
